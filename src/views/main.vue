@@ -25,6 +25,16 @@
     data() {
       return {}
     },
+    computed: {
+      isView() {
+        console.log(this.$store.state.isView)
+        return this.$store.state.isView;
+      },
+    },
+    created(){
+      console.log(123)
+      console.log(this.$store.state.isView)
+    },
     components: {
       comHeader,
       comMeun,

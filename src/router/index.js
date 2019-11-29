@@ -20,6 +20,10 @@ export default new Router({
       component: Main,
       children: [
         {
+          path: '/',
+          redirect: '/home'
+        },
+        {
           path: '/home',
           name: 'Home',
           component: Home,

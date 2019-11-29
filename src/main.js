@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store/index'
 import './assets/css/base.css' // 公共样式
 Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
@@ -26,6 +27,7 @@ router.beforeEach((to, from, next) => {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
