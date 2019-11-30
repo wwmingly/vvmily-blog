@@ -1,4 +1,5 @@
 <template>
+  <article>
     <div class="picsbox">
         <div class="bodymodal"></div>
         <!--播放到第一张图的提示-->
@@ -85,4 +86,6 @@
         <div class="gbko"> </div>
         </div>
     </div>
+  </article>
+
 </template>

@@ -1,6 +1,6 @@
 <template>
   <aside class="l_box">
-    <div class="wdxc">
+    <div class="wdxc com-aside-anm">
       <h2>我的相册</h2>
       <ul>
         <li><a href="/tuseday/photo/21.html" title="古典个人博客模板《青砖屋檐》"><img
@@ -17,7 +17,7 @@
               src="http://www.yangqq.com/d/file/news/s/2014-01-04/6bccfe64820d609bcd0ab7ca7a7fa5dd.jpg"></a></li>
       </ul>
     </div>
-    <div class="search">
+    <div class="search com-aside-anm">
       <form action="/tuseday/e/search/index.php" method="post" name="searchform" id="searchform">
         <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);"
           onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}"
@@ -28,7 +28,7 @@
         <input name="Submit" class="input_submit" value="搜索" type="submit">
       </form>
     </div>
-    <div class="tuijian">
+    <div class="tuijian com-aside-anm">
       <h2>最近更新</h2>
       <ul>
         <li><a href="/tuseday/diary/8.html" title="个人博客，属于我的小世界！">个人博客，属于我的小世界！</a></li>
@@ -41,7 +41,7 @@
         <li><a href="/tuseday/photo/7.html" title="简单手工纸玫瑰">简单手工纸玫瑰</a></li>
       </ul>
     </div>
-    <div class="tuijian">
+    <div class="tuijian com-aside-anm">
       <h2>点击排行</h2>
       <ul>
         <li><a href="/tuseday/diary/8.html" title="个人博客，属于我的小世界！">个人博客，属于我的小世界！</a></li>
@@ -54,7 +54,7 @@
         <li><a href="/tuseday/photo/7.html" title="简单手工纸玫瑰">简单手工纸玫瑰</a></li>
       </ul>
     </div>
-    <div class="fenlei">
+    <div class="fenlei com-aside-anm">
       <h2>分类</h2>
       <ul>
         <li><a href="/">新鲜事儿（13）</a></li>
@@ -64,7 +64,7 @@
         <li><a href="/">视频（8）</a></li>
       </ul>
     </div>
-    <div class="links">
+    <div class="links com-aside-anm">
       <h2>友情链接</h2>
       <ul>
         <li><a href="http://www.yangqq.com" title="杨青个人博客">vvmily个人博客</a></li>
@@ -72,3 +72,28 @@
     </div>
   </aside>
 </template>
+<script>
+  import {
+    animationB
+  } from '../utils/animation'
+  export default {
+    name: 'Aside',
+    components: {
+      
+    },
+    data() {
+      return {
+        scrollReveal: this.$scrollReveal()
+      }
+    },
+    created() {
+      console.log()
+    },
+    mounted() {
+      this.scrollReveal.reveal('.com-aside-anm', animationB)
+
+    },
+    methods: {}
+  }
+
+</script>

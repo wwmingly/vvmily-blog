@@ -9,7 +9,9 @@ import Album from '@/views/album'
 import Record from '@/views/record'
 import Video from '@/views/video'
 import About from '@/views/about'
-
+// 后台管理模块路由
+import Login from '@/views/admin/login'
+import Admin from '@/views/admin/Admin'
 Vue.use(Router)
 
 export default new Router({
@@ -80,6 +82,21 @@ export default new Router({
           }
         }
       ]
+    }, {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+      meta: {
+        title: '登录'
+      }
+    }, {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin,
+      meta: {
+        title: '管理系统'
+      },
+      children: []
     }
   ]
 })

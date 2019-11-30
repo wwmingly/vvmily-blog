@@ -1,15 +1,16 @@
 <template>
   <div>
-    <header>
+    <header class="k-header">
       <com-header></com-header>
       <com-meun></com-meun>
     </header>
-    <article>
+    <router-view />
+    <!-- <article>
       <main class="r_box">
         <router-view />
       </main>
       <com-aside></com-aside>
-    </article>
+    </article> -->
     <div class="blank"></div>
     <com-footer></com-footer>
     <a href="#" class="cd-top">Top</a>
@@ -26,14 +27,10 @@
       return {}
     },
     computed: {
-      isView() {
-        console.log(this.$store.state.isView)
-        return this.$store.state.isView;
-      },
+      
     },
     created(){
-      console.log(123)
-      console.log(this.$store.state.isView)
+      
     },
     components: {
       comHeader,
